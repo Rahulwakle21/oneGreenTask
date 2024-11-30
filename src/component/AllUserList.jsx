@@ -26,13 +26,13 @@ const AllUserList = () => {
       <h2 className="text-3xl font-semibold text-center py-5">ALL USER LIST</h2>
       <input
         type="text"
-        placeholder="Search by name or email"
+        placeholder="Search by Name or Email......."
         className="border p-2 w-full mb-4"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
       {isLoading === "loading" && <p>Loading...</p>}
-      {isLoading === "failed" && <p>Error fetching users.</p>}
+      {isLoading === "failed" && <p>Error fetching users Details</p>}
 
      <div>
      <UserTable users={searchUser} />

@@ -12,6 +12,11 @@ const userSlice = createSlice({
     isLoading: "", 
     error: null 
 },
+reducers: {
+  addUser: (state, action) => {
+    state.dataList.push(action.payload);
+  },
+},
   extraReducers: (builder) => {
     builder
       .addCase(fetchUsers.pending, (state) => {
@@ -28,4 +33,5 @@ const userSlice = createSlice({
   },
 });
 
+export const {addUser} = userSlice.actions;
 export default userSlice.reducer;

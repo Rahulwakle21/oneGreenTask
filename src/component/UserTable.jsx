@@ -20,7 +20,7 @@ const UserTable = ({ users }) => {
               <td className="border border-gray-200 p-2">{user.name}</td>
               <td className="border border-gray-200 p-2">{user.email}</td>
               <td className="border border-gray-200 p-2">{user.phone}</td>
-              <td className="border border-gray-200 p-2">{user.company.name}</td>
+              <td className="border border-gray-200 p-2">  {typeof user.company === "object" ? user.company.name : user.company}</td>
               <td className="border border-gray-200 p-2 text-blue-500">
                 <Link to={`/users/${user.id}`} >
                   View Details
